@@ -1,0 +1,28 @@
+## Value: 0 ~ 1
+
+<Button>
+    font_size: 30
+    ## RGBA(red, green, blue, alpha)
+    color: 0.3, 0.6, 0.7, 1
+    ## width, height
+    size_hint: 0.3, 0.5
+
+<FloatLayout>
+
+    Button
+        id: btn1
+        ########################################################################
+        ## x, y, top, bottom, left, right
+
+        # pos_hint: {'x': 0.5, 'y': 0}
+        # pos_hint: {'x': 0.5, 'y': 0.5}
+
+        # pos_hint: {'x': 0.5, 'top': 0.5}
+        pos_hint: {'x': 0.5, 'top': 1}
+        ########################################################################
+        text: 'Charlie Learns'
+        background_color: 0.1, 0.2, 0.3, 1
+    Button
+        id: btn2
+        text: 'to Code' if btn2.state == 'normal' else 'Button Pressed'
+        background_color: (0.1, 0.2, 0.3, 1) if btn2.state == 'normal' else (0, 0.5, 0, 1)

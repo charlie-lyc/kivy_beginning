@@ -1,0 +1,45 @@
+## Run to Check Using 'Builder'
+# Button
+#     text: 'Charlie Learns to Code'
+################################################################################
+WindowManager
+    MainWindow
+    SubWindow
+
+<MainWindow>
+    name: 'main'
+
+    GridLayout
+        cols: 1
+
+        GridLayout
+            cols: 2
+
+            Label
+                text: 'ID :              '
+            TextInput
+                id: identity
+                multiline: False
+
+            Label
+                text: 'Password : '
+            TextInput
+                id: password
+                multiline: False
+
+        Button
+            text: 'Submit'
+            on_release:
+                app.root.current = 'sub' if identity.text == 'hello' and password.text == 'world' else 'main'
+                root.manager.transition.direction = 'left'
+                identity.text = ''
+                password.text = ''
+                
+<SubWindow>
+    name: 'sub'
+
+    Button
+        text: 'Go Back'
+        on_release:
+            app.root.current = 'main'
+            root.manager.transition.direction = 'right'

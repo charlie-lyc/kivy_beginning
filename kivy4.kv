@@ -1,0 +1,18 @@
+<Widgets>
+
+    Button
+        text: 'Press Me'
+        on_release: app.popup.open()
+
+<PopupContent>
+
+    Label
+        text: 'Press the Button'
+        size_hint: 0.6, 0.2
+        pos_hint: {'x': 0.2, 'top': 1}
+
+    Button
+        text: 'Button'
+        size_hint: 0.8, 0.2
+        pos_hint: {'x': 0.1, 'top': 0.5}
+        on_release: app.popup.dismiss()

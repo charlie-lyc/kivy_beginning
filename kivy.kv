@@ -1,0 +1,33 @@
+## Parent Object : 'root'
+<MyGrid>
+    first_name: firstName
+    last_name: lastName
+    email: eMail
+
+    GridLayout
+        cols: 1
+        ## size: root.width, root.height == Full size
+        size: root.width - 300, root.height - 300
+        pos: 150, 150
+
+        GridLayout
+            cols: 2
+            Label
+                text: 'First Name: '
+            TextInput
+                id: firstName
+                multiline: False
+            Label
+                text: 'Last Name: '
+            TextInput
+                id: lastName
+                multiline: False
+            Label
+                text: 'Email: '
+            TextInput
+                id: eMail
+                multiline: False
+
+        Button
+            text: 'Submit'
+            on_press: root.press_on()
